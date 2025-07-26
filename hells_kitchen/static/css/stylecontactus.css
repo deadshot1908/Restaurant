@@ -1,0 +1,46 @@
+
+.contactinfo, .socialmedia {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contactinfo h1,
+.socialmedia h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.contactinfo h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #444;
+}
+
+.socialmedia {
+    margin-top: 3rem;
+}
+
+.socialmedia a {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+.socialmedia a:hover {
+    transform: scale(1.1);
+}
+
+.socialmedia img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}

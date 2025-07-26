@@ -1,0 +1,71 @@
+/* styledishdetail.css */
+
+.dish-detail-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+}
+
+.dish-left {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.dish-left h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.dish-left img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.dish-left h3, .dish-left h2 {
+    margin: 0.5rem 0;
+    color: #444;
+}
+
+.dish-right {
+    flex: 1;
+    min-width: 300px;
+    padding-top: 1rem;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.back-button{
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    z-index: 1000; /* ensures it appears on top */
+}
+
+.back-button img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.back-button img:hover {
+    transform: scale(1.1);
+}

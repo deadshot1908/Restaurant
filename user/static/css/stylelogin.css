@@ -1,0 +1,91 @@
+/* Reset & base style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #904e95);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login wrapper */
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Form Container */
+form {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form fields */
+form p {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: left;
+    display: block;
+}
+
+/* Login button */
+button[type="submit"] {
+    background: linear-gradient(to right, #4facfe, #904e95);
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+/* Register link styling */
+.register-link {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.register-link a {
+    color: #ffea00;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #ffffff;
+}

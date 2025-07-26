@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ffa500; /* Orange hover effect */
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    font-size: 0.9rem;
+}
+
+
+/* === Navbar Layout Update === */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Auth buttons section */
+.auth-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for auth buttons */
+.auth-btn {
+    background: linear-gradient(to right, #4facfe, #904e95); /* blue to purple */
+    border: 2px solid white;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.auth-btn:hover {
+    opacity: 0.85;
+    transform: scale(1.03);
+}
+
+/* Profile icon */
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    transition: border-color 0.3s ease;
+}
+
+.profile-icon:hover {
+    border-color: #ffa500;
+}
+
+
+/* Profile icon styling */
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.profile-icon:hover {
+    border-color: #ffa500;
+}
+
+/* Dropdown Container */
+.profile-dropdown {
+    position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #333;
+    border: 1px solid #444;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    display: none;
+    min-width: 140px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+/* Show dropdown on hover */
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+    padding: 0.5rem 1rem;
+}
+
+.dropdown-menu li a,
+.dropdown-menu li .logout-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li .logout-btn:hover {
+    color: #ffa500;
+}

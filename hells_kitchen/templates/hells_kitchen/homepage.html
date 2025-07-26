@@ -1,0 +1,11 @@
+{% extends "darkblueprint.html" %}
+{%load static %}
+{% block title %}Hell's Kitchen{% endblock %}
+
+{% block content %}
+<div style="padding: 2rem; text-align: center;">
+    <h1>Welcome to Hell's Kitchen</h1>
+    <p>Delicious food made with love and fresh ingredients.</p>
+    <img src="{% static 'images/rb.jpg' %}" alt="Restaurant Banner" style="width: 80%; margin-top: 2rem; border-radius: 10px;">
+</div>
+{% endblock %}

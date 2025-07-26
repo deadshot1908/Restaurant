@@ -1,0 +1,47 @@
+/* styleblueprint.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 1rem 2rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #ffa500; /* Orange hover effect */
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    font-size: 0.9rem;
+}

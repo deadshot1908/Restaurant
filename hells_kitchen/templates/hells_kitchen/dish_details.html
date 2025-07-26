@@ -1,0 +1,31 @@
+{% extends "darkblueprint.html" %}
+{% load static %}
+
+{% block title %}{{dish.dish}}{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styledishdetails.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<a href="{% url "menu" %}" class="back-button">
+    <img src="{% static "images/backbutton.jpg"%}" alt="back">
+</a>
+<div class="dish-detail-container">
+    <div class="dish-left">
+        <h1>{{dish.dish}}</h1>
+        <img src="{{dish.image.url}}" alt="Unable to load image">
+        <h3>{{dish.status}}</h3>
+        <h2>₹{{dish.price}}</h2>
+    </div>
+
+    <div class="dish-right">
+        <h2>Ingredients :</h2>
+        <p>{{dish.ingredients}}</p>
+        <h2>Description</h2>
+        <p>{{ dish.description }}</p>
+    </div>
+</div>
+{% endblock %}

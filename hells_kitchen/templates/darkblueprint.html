@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Restaurant{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styleblueprint.css' %}">
+    {% block style %}{% endblock %}
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Left Side - Main Links -->
+            <ul class="nav-list">
+                <li><a href="{% url 'homepage' %}">Home</a></li>
+                <li><a href="{% url 'menu' %}">Menu</a></li>
+                <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+                <li><a href="{% url 'aboutus' %}">About Us</a></li>
+            </ul>
+
+            <!-- Right Side - Auth Links -->
+            <ul class="auth-list">
+                {% if user.is_authenticated %}
+                    <li class="profile-dropdown">
+                        <a href="#">
+                            <img src="{% static 'images/profile-icon.png' %}" alt="Profile" class="profile-icon">
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'profile' %}">Profile</a></li>
+                            <li><a href="#">My Orders</a></li>
+                            <li>
+                                <form action="{% url 'logout' %}" method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="logout-btn">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li><a href="{% url 'login' %}"><button class="auth-btn">Login</button></a></li>
+                    <li><a href="{% url 'register' %}"><button class="auth-btn">Register</button></a></li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 MyRestaurant. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

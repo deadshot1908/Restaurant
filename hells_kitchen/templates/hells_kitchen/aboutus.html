@@ -1,0 +1,29 @@
+{% extends "darkblueprint.html" %}
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static "css/styleaboutus.css"%}">
+{% endblock %}
+{% block content %}
+<section class="about-us">
+  <h1>About Us</h1>
+  <p>
+    Welcome to <strong>Hell's Kitchen</strong>, where every dish tells a story and every bite brings joy. Founded with a passion for authentic flavors and warm hospitality, our mission is to create memorable dining experiences that feel like home.
+  </p>
+
+  <p>
+    Our chefs use the freshest ingredients, handpicked daily, to craft delicious recipes that blend traditional techniques with a modern twist. From our signature starters to our hearty main courses and indulgent desserts, each plate is prepared with care, love, and dedication.
+  </p>
+
+  <p>
+    Whether you're grabbing a quick bite, enjoying a family dinner, or celebrating a special occasion, we strive to provide a cozy atmosphere, excellent service, and food that satisfies the soul.
+  </p>
+
+  <p>
+    Thank you for choosing Hell's Kitchen — where good food meets great people.
+  </p>
+</section>
+
+{% endblock %}

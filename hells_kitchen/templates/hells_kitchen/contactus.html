@@ -1,0 +1,37 @@
+{% extends "darkblueprint.html" %}
+{% load static %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static "css/stylecontactus.css"%}">
+{% endblock %}
+
+
+{% block content %}
+<div class="contactinfo">
+    <h1>Contact Info</h1>
+    <h2>Email : contactus@hellskitchen.com</h2>
+    <h2>Phone : 11122 11122</h2>
+</div>
+
+<div class="socialmedia">
+    <h1>Our Social Media</h1>
+    <a href="#" target="_blank">
+        <img src="{% static "images/instalogo.jpg" %}" alt="Instagram">
+    </a>
+
+    <a href="https://wa.me/9170558527" target="_blank">
+        <img src="{% static 'images/whatsapplogo.jpg'%}" alt="Whatsapp">
+    </a>
+
+    <a href="#" target="_blank">
+        <img src="{% static "images/facebooklogo.jpg" %}" alt="facebook">
+    </a>
+
+    <a href="#" target="_blank">
+        <img src="{% static "images/xlogo.png" %}" alt="X">
+    </a>
+    
+</div>
+{% endblock %}

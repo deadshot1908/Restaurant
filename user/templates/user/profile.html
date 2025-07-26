@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styleprofile.css'%}">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="profile-container">
+        <h2>Your Profile</h2>
+
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" value="{{username}}" disabled>
+            </div>
+
+            <div class="form_group">
+                <label>Email:</label>
+                <input type="text" value="{{email}}" disabled>
+            </div>
+
+            {{form.as_p}}
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>

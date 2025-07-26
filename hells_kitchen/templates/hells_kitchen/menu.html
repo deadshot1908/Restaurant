@@ -1,0 +1,26 @@
+{% extends "darkblueprint.html" %}
+{% load static %}
+
+{% block title %}Menu{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/stylemenu.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+
+<div class="menu-grid">
+  {% for item in menu %}
+    <a href="{% url 'dish_details' item.id %}" class="menu-link">
+      <div class="menu-item">
+        <h1>{{ item.dish }}</h1>
+        {% if item.image %}
+          <img src="{{ item.image.url }}" alt="{{ item.dish }}">
+        {% endif %}
+        <h2>₹{{ item.price }}</h2>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+{% endblock %}
