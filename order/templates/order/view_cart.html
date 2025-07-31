@@ -1,0 +1,33 @@
+{% extends "darkblueprint.html" %}
+{% load static %}
+
+{% block title %}View Cart{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleview_cart.css' %}">
+{% endblock style %}
+
+{% block content %}
+
+    {% for dish in dishes %}
+        <div class="dish">
+            <img src="{{dish.dish.image.url}}" alt="404">
+            <h2>{{dish.dish.dish}}</h2>
+            <h2>{{dish.dish.price}}</h2>
+            <h2>
+                <a href="{% url 'remove from cart' dish.dish.id %}?next={{ request.path }}" class="decrement">
+                    <button>-</button>
+                </a>
+                {{ dish.quantity }}
+
+                <a href="{% url 'add to cart' dish.dish.id %}?next={{ request.path }}" class="incrememt">
+                <button>+</button>
+                </a>
+            </h2>
+            <h2>{{dish.totalprice}}</h2>
+
+        </div>   
+    {% endfor %}
+    <h1>Grand Total : {{grandtotal}}</h1>
+
+{% endblock %}

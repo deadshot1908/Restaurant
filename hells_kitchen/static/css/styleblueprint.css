@@ -80,19 +80,6 @@ body {
     transform: scale(1.03);
 }
 
-/* Profile icon */
-.profile-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-    transition: border-color 0.3s ease;
-}
-
-.profile-icon:hover {
-    border-color: #ffa500;
-}
 
 
 /* Profile icon styling */
@@ -158,4 +145,21 @@ body {
 .dropdown-menu li a:hover,
 .dropdown-menu li .logout-btn:hover {
     color: #ffa500;
+}
+
+
+/* Match cart size to profile icon */
+.cart {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Align cart before profile icon */
+.auth-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
 }

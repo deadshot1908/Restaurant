@@ -11,14 +11,37 @@
 
 
 <div class="menu-grid">
+
   {% for item in menu %}
+
     <a href="{% url 'dish_details' item.id %}" class="menu-link">
+
       <div class="menu-item">
+
         <h1>{{ item.dish }}</h1>
         {% if item.image %}
           <img src="{{ item.image.url }}" alt="{{ item.dish }}">
         {% endif %}
         <h2>₹{{ item.price }}</h2>
+
+        {% if item.quantity == 0 %}
+          <a href="{% url 'add to cart' item.id %}" class="cart">
+            <button>Add to cart</button>
+          </a>
+
+        {% else %}
+
+          <div class="cart-controls">
+            <a href="{% url 'remove from cart' item.id %}" class="cart2">
+              <button>-</button>
+            </a>
+              <p> {{ item.quantity }} </p>
+
+            <a href="{% url 'add to cart' item.id %}" class="cart2">
+              <button>+</button>
+            </a>
+          </div>
+        {% endif %}
       </div>
     </a>
   {% endfor %}

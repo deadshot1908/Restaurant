@@ -24,6 +24,11 @@
             <!-- Right Side - Auth Links -->
             <ul class="auth-list">
                 {% if user.is_authenticated %}
+
+                    <a href="{% url 'viewcart'%}">
+                        <img src="{% static 'images/cart.jpg'%}" alt="cart" class="cart">
+                    </a>
+                    
                     <li class="profile-dropdown">
                         <a href="#">
                             <img src="{% static 'images/profile-icon.png' %}" alt="Profile" class="profile-icon">
@@ -39,6 +44,7 @@
                             </li>
                         </ul>
                     </li>
+
                 {% else %}
                     <li><a href="{% url 'login' %}"><button class="auth-btn">Login</button></a></li>
                     <li><a href="{% url 'register' %}"><button class="auth-btn">Register</button></a></li>

@@ -1,0 +1,45 @@
+/* Container for each dish */
+.dish {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Dish image - small thumbnail */
+.dish img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Dish details: price, quantity, total price */
+.dish h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+/* Grand total */
+h1 {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    color: #222;
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+}
+
+a{
+    text-decoration: none;
+}
