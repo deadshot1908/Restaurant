@@ -30,16 +30,36 @@
     margin: 0;
 }
 
-/* Grand total */
-h1 {
-    text-align: right;
-    margin-top: 30px;
-    font-size: 1.5rem;
-    color: #222;
-    border-top: 2px solid #ccc;
-    padding-top: 20px;
-}
-
 a{
     text-decoration: none;
+}
+
+.total-order-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* aligns both elements vertically at the center */
+    padding: 20px 0;
+    margin : 40px 0;
+}
+
+.grand-total {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.order {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order:hover {
+    background-color: darkorange;
 }

@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     Name = models.CharField(max_length=25, blank=True)
-    Phone = models.CharField(max_length=15, blank=True)
+    Phone = models.CharField(max_length=10, blank=True)
     Address = models.TextField(blank=True)
 
     def __str__(self):

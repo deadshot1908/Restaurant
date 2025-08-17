@@ -12,7 +12,7 @@
         <h2>Your Profile</h2>
 
 
-        <form method="POST">
+        <form method="POST" action="{% url 'profile' %}">
             {% csrf_token %}
             <div class="form-group">
                 <label>Username:</label>
@@ -25,6 +25,8 @@
             </div>
 
             {{form.as_p}}
+
+            <input type="hidden" name="next" value="{{next}}">
             <button type="submit">Save Changes</button>
         </form>
     </div>

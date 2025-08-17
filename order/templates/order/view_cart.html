@@ -28,6 +28,10 @@
 
         </div>   
     {% endfor %}
-    <h1>Grand Total : {{grandtotal}}</h1>
-
+    <div class="total-order-container">
+        <h1 class="grand-total">Grand Total : ₹{{grandtotal}}</h1>
+        <a href="{% url 'profile'%}?next={% url 'checkprofile'%}">
+            <button class="order">Place Order</button>
+        </a>
+    </div>
 {% endblock %}

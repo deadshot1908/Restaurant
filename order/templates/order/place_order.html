@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Payment</title>
+    <link rel="stylesheet" href="{% static 'css/styleplace_order.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1 class="total-price">Total Price: {{ total }}</h1>
+    </header>
+
+    <main>
+        <section class="payment-section">
+            <h3>Select Payment Method</h3>
+            <form method="POST" class="payment-form">
+                {% csrf_token %}
+
+                <div class="payment-option">
+                    <input type="radio" id="upi" name="payment_method" value="UPI" disabled>
+                    <label for="upi">UPI</label>
+                </div>
+
+                <div class="payment-option">
+                    <input type="radio" id="net-banking" name="payment_method" value="Net_Banking" disabled>
+                    <label for="net-banking">Net Banking</label>
+                </div>
+
+                <div class="payment-option">
+                    <input type="radio" id="cod" name="payment_method" value="COD">
+                    <label for="cod">Cash on Delivery (COD)</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

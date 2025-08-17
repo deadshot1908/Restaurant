@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9; /* light green background */
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2e7d32;
+}
+
+/* Orders Container */
+.orders-container {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Each Order Card */
+.order-card {
+    display: block;
+    background-color: #f1f8f4; /* soft greenish-white */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: inherit;
+    border-left: 5px solid #2e7d32;
+    transition: all 0.2s ease;
+}
+
+.order-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    background-color: #e0f2e9; /* slightly brighter green on hover */
+}
+
+/* Order Details */
+.order-id,
+.order-date,
+.order-amount,
+.order-status {
+    margin-bottom: 6px;
+}
+
+/* Status Colors */
+.status-delivered {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #ff9800;
+    font-weight: bold;
+}
+
+.status-cancelled {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* No Orders Message */
+.no-orders {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    padding: 30px 0;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="{% static 'css/styleorderconfirmation.css' %}">
+</head>
+<body>
+    <div class="success-box">
+        <h3>Your order is confirmed with Order ID: {{order.order_id}}</h3>
+        <h5><a href="{% url 'myorder' %}">Click here</a> to view your orders</h5>
+    </div>
+</body>
+</html>

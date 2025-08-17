@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="{% static 'css/stylemyorder.css' %}">
+</head>
+<body>
+    <h1>My Orders</h1>
+
+    <div class="orders-container">
+        {% for order in orders %}
+        <a href="{% url 'orderdetails' order.order_id %}" class="order-card">
+            <div class="order-id"><strong>Order ID:</strong> {{ order.order_id }}</div>
+            <div class="order-date"><strong>Date:</strong> {{ order.date_ordered }}</div>
+            <div class="order-amount"><strong>Amount:</strong> ₹{{ order.amount }}</div>
+            <div class="order-status status-{{ order.status|lower }}">
+                <strong>Status:</strong> {{ order.status }}
+            </div>
+        </a>
+        {% empty %}
+        <p class="no-orders">You have no orders yet.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
