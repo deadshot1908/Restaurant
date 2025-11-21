@@ -18,8 +18,6 @@ def register(request):
         form = UserRegistrationForm()
     return render(request, 'registration/register.html', {'form': form})
 
-def logout_view(request):
-    return render(request, 'registration/logged_out.html')
 
 def home(request):
     return render(request, 'user_home.html')
